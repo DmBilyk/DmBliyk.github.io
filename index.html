@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crusader Kings III</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.content2 {
+  position: fixed;
+  bottom: 100;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://cdn.akamai.steamstatic.com/steam/apps/256783789/movie480_vp9.webm?t=1589472472" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>
+<div class="content2">
+
+<h1>Crusader Kings III</h1>
+  <p>Ваша спадщина чекає. 
+Виберіть свій знатний дім і приведіть свою династію до величі в середньовічній епопеї, яка охоплює покоління. 
+Війна — це лише один із багатьох інструментів для встановлення вашого правління, оскільки справжня стратегія вимагає експертних дипломатичних навичок, 
+володіння вашим царством і справжньої хитрості. 
+Crusader Kings III продовжує популярну серію, розроблену Paradox Development Studio, 
+демонструючи широко визнанепоєднання захоплюючої великої стратегіїта глибокої, драматичної середньовічної рольової гри.</p>
+</div>
+<div class="content">
+  <h1>Мої враження</h1>
+<p>
+Граю досить недовго,але вона мені вже сподобалась.Неймовірний і пророблений сюжет.Цікаві персонажі ,адже кожен персонаж окрема особистість.
+Цікавий геймплей це суміш стратегії,симулятора та рольової гри.Мабуть моя оцінка цій грі 9/10.Думаю було би краще ,якби вона була трішки простіша.
+</p>
+  
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+  
+  <a href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/"><img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="Steam page" style="width:42px;height:42px;margin-left: 20%;"></a>
+
+<a href="https://www.paradoxinteractive.com/games/crusader-kings-iii/about"><img src="https://avatars.akamai.steamstatic.com/8e76e8626137272949479ef01cb78268ced22dee_full.jpg" alt="Paradox" style="width:42px;height:42px;margin-left: 3%;"></a>
+</div>
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+</body>
+</html>
