@@ -48,6 +48,15 @@ body {
   color: #fff;
   cursor: pointer;
 }
+#myBtn1 {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
 
 #myBtn:hover {
   background: #ddd;
@@ -58,37 +67,31 @@ body {
 <body>
 
 <video autoplay muted loop id="myVideo">
-  <source src="https://cdn.akamai.steamstatic.com/steam/apps/256783789/movie480_vp9.webm?t=1589472472" type="video/webm">
+  <source src="https://cdn.cloudflare.steamstatic.com/steam/apps/256799392/movie480_vp9.webm?t=1598976952" type="video/webm">
   Your browser does not support HTML5 video.
 </video>
-<div class="content2">
+ 
+
+<div class="content">
 
 <h1>Crusader Kings III</h1>
-  <p>Ваша спадщина чекає. 
-Виберіть свій знатний дім і приведіть свою династію до величі в середньовічній епопеї, яка охоплює покоління. 
-Війна — це лише один із багатьох інструментів для встановлення вашого правління, оскільки справжня стратегія вимагає експертних дипломатичних навичок, 
-володіння вашим царством і справжньої хитрості. 
-Crusader Kings III продовжує популярну серію, розроблену Paradox Development Studio, 
-демонструючи широко визнанепоєднання захоплюючої великої стратегіїта глибокої, драматичної середньовічної рольової гри.</p>
-</div>
-<div class="content">
-  <h1>Мої враження</h1>
-<p>
-Граю досить недовго,але вона мені вже сподобалась.Неймовірний і пророблений сюжет.Цікаві персонажі ,адже кожен персонаж окрема особистість.
-Цікавий геймплей це суміш стратегії,симулятора та рольової гри.Мабуть моя оцінка цій грі 9/10.Думаю було би краще ,якби вона була трішки простіша.
-</p>
-  
+  <p id="demo">Your legacy awaits. Choose your noble house and lead your dynasty to greatness in a Middle Ages epic that spans generations. War is but one of many tools to establish your reign, as real strategy requires expert diplomatic skill, mastery of your realm, and true cunning. Crusader Kings III continues the popular series made by Paradox Development Studio, featuring the widely acclaimed marriage of immersive grand strategy and deep, dramatic medieval roleplaying. </p>
   <button id="myBtn" onclick="myFunction()">Pause</button>
-  
+   <button id="myBtn1" onclick="myFunction1()">Impression</button>
   <a href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/"><img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="Steam page" style="width:42px;height:42px;margin-left: 20%;"></a>
 
 <a href="https://www.paradoxinteractive.com/games/crusader-kings-iii/about"><img src="https://avatars.akamai.steamstatic.com/8e76e8626137272949479ef01cb78268ced22dee_full.jpg" alt="Paradox" style="width:42px;height:42px;margin-left: 3%;"></a>
 </div>
 
+  
+ 
+
 
 <script>
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+let x = 1;
 
 function myFunction() {
   if (video.paused) {
@@ -99,8 +102,39 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+
+
+function myFunction1() {
+  if(x == 1)
+  {
+ document.getElementById("demo").innerHTML = "I've been playing it for a short time, but I already liked it. An incredible and well-developed plot. Interesting characters, because each character is a separate personality. The interesting gameplay is a mixture of strategy, simulator and role-playing game. I guess my rating for this game is 9/10. I think it would be better if it was a little simpler.";
+  btn1.innerHTML = "About";
+  x++;
+} 
+else{
+ document.getElementById("demo").innerHTML = "Your legacy awaits. Choose your noble house and lead your dynasty to greatness in a Middle Ages epic that spans generations. War is but one of many tools to establish your reign, as real strategy requires expert diplomatic skill, mastery of your realm, and true cunning. Crusader Kings III continues the popular series made by Paradox Development Studio, featuring the widely acclaimed marriage of immersive grand strategy and deep, dramatic medieval roleplaying."
+  btn1.innerHTML = "Impression";
+ x--;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 </script>
 
 
 </body>
+
 </html>
